@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Capa_Diseño.Mantenimientos;
+using Capa_Diseño.Procesos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -68,12 +70,12 @@ namespace Capa_Diseño
 
         private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
+            //toolStrip.Visible = toolBarToolStripMenuItem.Checked;
         }
 
         private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
+            //statusStrip.Visible = statusBarToolStripMenuItem.Checked;
         }
 
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,6 +104,172 @@ namespace Capa_Diseño
             {
                 childForm.Close();
             }
+        }
+        bool ventanacurso = false;
+        Frm_Mantlineas curso = new Frm_Mantlineas();
+        private void LineaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Mantlineas);
+            if (ventanacurso == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    curso = new Frm_Mantlineas();
+                }
+
+                curso.MdiParent = this;
+                curso.Show();
+                Application.DoEvents();
+                ventanacurso = true;
+            }
+            else
+            {
+                curso.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+
+        }
+
+
+        bool ventanacurso1 = false;
+        Frm_Mantmarcas curso1 = new Frm_Mantmarcas();
+
+        private void MarcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Mantmarcas);
+            if (ventanacurso1 == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    curso1 = new Frm_Mantmarcas();
+                }
+
+                curso1.MdiParent = this;
+                curso1.Show();
+                Application.DoEvents();
+                ventanacurso1 = true;
+            }
+            else
+            {
+                curso1.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanacurso2 = false;
+        Frm_MantProducto curso2 = new Frm_MantProducto();
+        private void ProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantProducto);
+            if (ventanacurso2 == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    curso2 = new Frm_MantProducto();
+                }
+
+                curso2.MdiParent = this;
+                curso2.Show();
+                Application.DoEvents();
+                ventanacurso2 = true;
+            }
+            else
+            {
+                curso2.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+
+
+        bool ventanacurso3 = false;
+        Frm_MantClientes curso3 = new Frm_MantClientes();
+        private void ClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantClientes);
+            if (ventanacurso3 == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    curso3 = new Frm_MantClientes();
+                }
+
+                curso3.MdiParent = this;
+                curso3.Show();
+                Application.DoEvents();
+                ventanacurso3 = true;
+            }
+            else
+            {
+                curso3.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+
+        bool ventanacurso4 = false;
+        Frm_Vendedores curso4 = new Frm_Vendedores();
+        private void VendedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Vendedores);
+            if (ventanacurso4 == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    curso4 = new Frm_Vendedores();
+                }
+
+                curso4.MdiParent = this;
+                curso4.Show();
+                Application.DoEvents();
+                ventanacurso4 = true;
+            }
+            else
+            {
+                curso4.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+        bool ventanacurso5 = false;
+        Frm_MantProveedores curso5 = new Frm_MantProveedores();
+        private void ProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_MantProveedores);
+            if (ventanacurso4 == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    curso5 = new Frm_MantProveedores();
+                }
+
+                curso5.MdiParent = this;
+                curso5.Show();
+                Application.DoEvents();
+                ventanacurso5 = true;
+            }
+            else
+            {
+                curso5.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+        }
+        bool ventanacurso6 = false;
+        Frm_deudas curso6 = new Frm_deudas();
+        private void DeudasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmC = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_deudas);
+            if (ventanacurso6 == false || frmC == null)
+            {
+                if (frmC == null)
+                {
+                    curso6 = new Frm_deudas();
+                }
+
+                curso6.MdiParent = this;
+                curso6.Show();
+                Application.DoEvents();
+                ventanacurso6 = true;
+            }
+            else
+            {
+                curso6.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            }
+
         }
     }
 }

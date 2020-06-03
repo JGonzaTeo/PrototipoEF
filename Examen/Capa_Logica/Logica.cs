@@ -37,5 +37,13 @@ namespace Capa_Logica
         {
             return sn.consultacurso(tabla);
         }
+        public OdbcDataReader consultacuentasconatbles1()
+        {
+            return sn.consultacuentasconatbles1();
+        }
+        public OdbcDataReader consultacuentasconatbles2()
+        {
+            return sn.consultacuentasconatbles2();
+        }
     }
 }

@@ -142,5 +142,40 @@ namespace Capa_Datos
                 return null;
             }
         }
+
+        public OdbcDataReader consultacuentasconatbles1()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "select nombre_cliente,total_ventaenca FROM clientes cli INNER JOIN ventas_encabezado ve ON cli.codigo_cliente = ve.codigo_cliente; ";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
+        public OdbcDataReader consultacuentasconatbles2()
+        {
+            try
+            {
+                cn.conexionbd();
+                string consulta = "select nombre_proveedor,total_compraenca FROM proveedores pro INNER JOIN compras_encabezado co ON pro.codigo_proveedor = co.codigo_proveedor;";
+                comm = new OdbcCommand(consulta, cn.conexionbd());
+                OdbcDataReader mostrar = comm.ExecuteReader();
+                return mostrar;
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+                return null;
+            }
+
+        }
     }
 }
